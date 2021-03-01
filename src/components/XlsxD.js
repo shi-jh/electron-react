@@ -5,7 +5,7 @@ function XlsxD() {
   const saveH =() => {
     const day = new Date().getDate();
     const mon = new Date().getMonth();
-    const title = `${mon}_${day}`
+    const title = `${mon + 1}_${day}`
     let Data = JSON.parse(localStorage.getItem("todos"));
     const worksheet = Xlsx.utils.json_to_sheet(Data);
     const workBook = Xlsx.utils.book_new();
